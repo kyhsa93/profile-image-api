@@ -1,13 +1,15 @@
 'use strict';
 
-let port = 5000;
+const port = 5000;
 
-let express = require('express');
-let app = express();
+const express = require('express');
+const app = express();
 
-let profileImage = require('./src/routes/profile/image');
+const sign = require('./src/routes/sign/sign');
+const profileImage = require('./src/routes/profile/image');
 
-app.get('/profile/image/:imageId');
+app.get('/sign/:id/:password', sign);
+app.get('/profile/image/:imageId', profileImage);
 
 app.listen(port, () => {
     console.log(`express app listening on port ${port}`);

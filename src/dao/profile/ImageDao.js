@@ -1,3 +1,3 @@
-export class ImageDao {
+module.exports = class ImageDao {
     constructor(){};
 };
