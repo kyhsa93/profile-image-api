@@ -6,8 +6,12 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const app = express();
 
+var header = require('./src/middleware/header');
+
 const sign = require('./src/routes/sign/sign');
 const profileImage = require('./src/routes/profile/image');
+
+app.use(header());
 
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
