@@ -1,5 +1,6 @@
 'use strict';
 module.exports = {
-    'secret': 'SeCrEtKeY',
-    'expiresIn': 60
+    //jwt claim 등 정의
+    secret: 'SeCrEtKeY',
+    expiresIn: 60*60
 };
